@@ -141,7 +141,6 @@
 			interrupts-extended = <&exti 30 IRQ_TYPE_LEVEL_HIGH>;
 			clocks = <&rcc UART4_K>;
 			resets = <&rcc UART4_R>;
-			wakeup-source;
 			status = "disabled";
 		};
 
@@ -527,7 +526,6 @@
 			#address-cells = <1>;
 			#size-cells = <0>;
 			st,syscfg-fmp = <&syscfg 0x4 0x20>;
-			wakeup-source;
 			status = "disabled";
 			secure-status = "disabled";
 		};
