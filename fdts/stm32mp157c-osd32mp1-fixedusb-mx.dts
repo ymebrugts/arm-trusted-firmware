@@ -107,13 +107,13 @@
 					 <STM32_PINMUX('C', 6, AF10)>, /* SDMMC2_D6 */
 					 <STM32_PINMUX('C', 7, AF10)>, /* SDMMC2_D7 */
 					 <STM32_PINMUX('G', 6, AF10)>; /* SDMMC2_CMD */
-			bias-pull-up;
+			bias-disable;
 			drive-push-pull;
 			slew-rate = <2>;
 		};
 		pins2 {
 			pinmux = <STM32_PINMUX('E', 3, AF9)>; /* SDMMC2_CK */
-			bias-pull-up;
+			bias-disable;
 			drive-push-pull;
 			slew-rate = <2>;
 		};
@@ -122,7 +122,7 @@
 	uart4_pins_mx: uart4_mx-0 {
 		pins1 {
 			pinmux = <STM32_PINMUX('B', 2, AF8)>; /* UART4_RX */
-			bias-pull-up;
+			bias-disable;
 		};
 		pins2 {
 			pinmux = <STM32_PINMUX('G', 11, AF6)>; /* UART4_TX */
@@ -544,7 +544,6 @@
 
 			bst_out: boost {
 				regulator-name = "bst_out";
-				regulator-always-on;
 			};
 
 			vbus_otg: pwr_sw1 {
@@ -554,7 +553,6 @@
 			vbus_sw: pwr_sw2 {
 				regulator-name = "vbus_sw";
 				regulator-active-discharge = <1>;
-				regulator-always-on;
 			};
 		};
 	};
