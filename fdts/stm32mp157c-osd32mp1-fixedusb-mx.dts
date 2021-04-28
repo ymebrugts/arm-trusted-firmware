@@ -346,7 +346,8 @@
 				regulator-over-current-protection;
 
 				lp-stop {
-					regulator-off-in-suspend;
+					regulator-on-in-suspend;
+					regulator-suspend-microvolt = <1200000>;
 				};
 
 				standby-ddr-sr {
@@ -367,11 +368,13 @@
 				regulator-over-current-protection;
 
 				lp-stop {
-					regulator-off-in-suspend;
+					regulator-suspend-microvolt = <1350000>;
+					regulator-on-in-suspend;
 				};
 
 				standby-ddr-sr {
-					regulator-off-in-suspend;
+					regulator-suspend-microvolt = <1350000>;
+					regulator-on-in-suspend;
 				};
 
 				standby-ddr-off {
@@ -388,15 +391,18 @@
 				regulator-over-current-protection;
 
 				lp-stop {
-					regulator-off-in-suspend;
+					regulator-suspend-microvolt = <3300000>;
+					regulator-on-in-suspend;
 				};
 
 				standby-ddr-sr {
-					regulator-off-in-suspend;
+					regulator-suspend-microvolt = <3300000>;
+					regulator-on-in-suspend;
 				};
 
 				standby-ddr-off {
-					regulator-off-in-suspend;
+					regulator-suspend-microvolt = <3300000>;
+					regulator-on-in-suspend;
 				};
 			};
 
@@ -523,10 +529,6 @@
 				regulator-max-microvolt = <1200000>;
 				regulator-always-on;
 
-				lp-stop {
-					regulator-off-in-suspend;
-				};
-
 				standby-ddr-sr {
 					regulator-off-in-suspend;
 				};
@@ -542,11 +544,11 @@
 				regulator-over-current-protection;
 
 				lp-stop {
-					regulator-off-in-suspend;
+					regulator-on-in-suspend;
 				};
 
 				standby-ddr-sr {
-					regulator-off-in-suspend;
+					regulator-on-in-suspend;
 				};
 
 				standby-ddr-off {
@@ -587,6 +589,7 @@
 			vbus_sw: pwr_sw2 {
 				regulator-name = "vbus_sw";
 				regulator-active-discharge = <1>;
+				st,mask-reset
 				lp-stop {
 					regulator-off-in-suspend;
 				};
@@ -807,4 +810,5 @@
 	st,csi-cal-input = <8>;
 };
 /* USER CODE END addons */
+
 
