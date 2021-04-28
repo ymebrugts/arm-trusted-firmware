@@ -346,8 +346,7 @@
 				regulator-over-current-protection;
 
 				lp-stop {
-					regulator-on-in-suspend;
-					regulator-suspend-microvolt = <1200000>;
+					regulator-off-in-suspend;
 				};
 
 				standby-ddr-sr {
@@ -368,13 +367,11 @@
 				regulator-over-current-protection;
 
 				lp-stop {
-					regulator-suspend-microvolt = <1350000>;
-					regulator-on-in-suspend;
+					regulator-off-in-suspend;
 				};
 
 				standby-ddr-sr {
-					regulator-suspend-microvolt = <1350000>;
-					regulator-on-in-suspend;
+					regulator-off-in-suspend;
 				};
 
 				standby-ddr-off {
@@ -387,23 +384,19 @@
 				regulator-min-microvolt = <3300000>;
 				regulator-max-microvolt = <3300000>;
 				regulator-always-on;
-				st,mask-reset;
 				regulator-initial-mode = <0>;
 				regulator-over-current-protection;
 
 				lp-stop {
-					regulator-suspend-microvolt = <3300000>;
-					regulator-on-in-suspend;
+					regulator-off-in-suspend;
 				};
 
 				standby-ddr-sr {
-					regulator-suspend-microvolt = <3300000>;
-					regulator-on-in-suspend;
+					regulator-off-in-suspend;
 				};
 
 				standby-ddr-off {
-					regulator-suspend-microvolt = <3300000>;
-					regulator-on-in-suspend;
+					regulator-off-in-suspend;
 				};
 			};
 
@@ -530,6 +523,10 @@
 				regulator-max-microvolt = <1200000>;
 				regulator-always-on;
 
+				lp-stop {
+					regulator-off-in-suspend;
+				};
+
 				standby-ddr-sr {
 					regulator-off-in-suspend;
 				};
@@ -545,11 +542,11 @@
 				regulator-over-current-protection;
 
 				lp-stop {
-					regulator-on-in-suspend;
+					regulator-off-in-suspend;
 				};
 
 				standby-ddr-sr {
-					regulator-on-in-suspend;
+					regulator-off-in-suspend;
 				};
 
 				standby-ddr-off {
