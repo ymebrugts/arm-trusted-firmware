@@ -434,6 +434,10 @@
 				regulator-min-microvolt = <1800000>;
 				regulator-max-microvolt = <1800000>;
 				regulator-always-on;
+				
+				lp-stop {
+					regulator-off-in-suspend;
+				};
 
 				standby-ddr-sr {
 					regulator-off-in-suspend;
@@ -485,6 +489,10 @@
 				regulator-max-microvolt = <3300000>;
 				regulator-always-on;
 
+				lp-stop {
+					regulator-off-in-suspend;
+				};
+
 				standby-ddr-sr {
 					regulator-off-in-suspend;
 				};
@@ -499,6 +507,10 @@
 				regulator-min-microvolt = <2900000>;
 				regulator-max-microvolt = <2900000>;
 				regulator-always-on;
+
+				lp-stop {
+					regulator-off-in-suspend;
+				};
 
 				standby-ddr-sr {
 					regulator-off-in-suspend;
@@ -544,15 +556,48 @@
 
 			bst_out: boost {
 				regulator-name = "bst_out";
+				lp-stop {
+					regulator-off-in-suspend;
+				};
+
+				standby-ddr-sr {
+					regulator-off-in-suspend;
+				};
+
+				standby-ddr-off {
+					regulator-off-in-suspend;
+				};
 			};
 
 			vbus_otg: pwr_sw1 {
 				regulator-name = "vbus_otg";
+				lp-stop {
+					regulator-off-in-suspend;
+				};
+
+				standby-ddr-sr {
+					regulator-off-in-suspend;
+				};
+
+				standby-ddr-off {
+					regulator-off-in-suspend;
+				};
 			};
 
 			vbus_sw: pwr_sw2 {
 				regulator-name = "vbus_sw";
 				regulator-active-discharge = <1>;
+				lp-stop {
+					regulator-off-in-suspend;
+				};
+
+				standby-ddr-sr {
+					regulator-off-in-suspend;
+				};
+
+				standby-ddr-off {
+					regulator-off-in-suspend;
+				};
 			};
 		};
 	};
