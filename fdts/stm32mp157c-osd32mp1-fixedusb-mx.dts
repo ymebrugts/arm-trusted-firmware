@@ -415,9 +415,8 @@
 				regulator-over-current-protection;
 				regulator-initial-mode = <0>;
 
-				lp-stop {
-					regulator-suspend-microvolt = <3300000>;
-					regulator-on-in-suspend;
+				lp-stop {					
+					regulator-off-in-suspend;
 				};
 
 				standby-ddr-sr {
@@ -453,6 +452,10 @@
 				regulator-min-microvolt = <3300000>;
 				regulator-max-microvolt = <3300000>;
 				regulator-always-on;
+
+				lp-stop {
+					regulator-off-in-suspend;
+				};
 
 				standby-ddr-sr {
 					regulator-off-in-suspend;
