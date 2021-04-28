@@ -589,7 +589,7 @@
 			vbus_sw: pwr_sw2 {
 				regulator-name = "vbus_sw";
 				regulator-active-discharge = <1>;
-				st,mask-reset
+				st,mask-reset;
 				lp-stop {
 					regulator-off-in-suspend;
 				};
