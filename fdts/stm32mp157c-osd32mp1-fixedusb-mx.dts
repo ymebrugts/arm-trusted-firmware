@@ -626,6 +626,57 @@
 	>;
 	system_off_soc_mode = <STM32_PM_SHUTDOWN>;
 	/* USER CODE END pwr_regulators */
+
+	reg11: reg11 {
+		regulator-name = "reg11";
+		regulator-min-microvolt = <1100000>;
+		regulator-max-microvolt = <1100000>;
+		lp-stop {
+			regulator-off-in-suspend;
+		};
+
+		standby-ddr-sr {
+			regulator-off-in-suspend;
+		};
+
+		standby-ddr-off {
+			regulator-off-in-suspend;
+		};
+	};
+
+	reg18: reg18 {
+		regulator-name = "reg18";
+		regulator-min-microvolt = <1800000>;
+		regulator-max-microvolt = <1800000>;
+		lp-stop {
+			regulator-off-in-suspend;
+		};
+
+		standby-ddr-sr {
+			regulator-off-in-suspend;
+		};
+
+		standby-ddr-off {
+			regulator-off-in-suspend;
+		};
+	};
+
+	usb33: usb33 {
+		regulator-name = "usb33";
+		regulator-min-microvolt = <3300000>;
+		regulator-max-microvolt = <3300000>;
+		lp-stop {
+			regulator-off-in-suspend;
+		};
+
+		standby-ddr-sr {
+			regulator-off-in-suspend;
+		};
+
+		standby-ddr-off {
+			regulator-off-in-suspend;
+		};
+	};
 };
 
 &rcc{
