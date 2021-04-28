@@ -389,7 +389,6 @@
 				regulator-always-on;
 				regulator-initial-mode = <0>;
 				regulator-over-current-protection;
-
 				lp-stop {
 					regulator-suspend-microvolt = <3300000>;
 					regulator-on-in-suspend;
@@ -414,10 +413,10 @@
 				regulator-over-current-protection;
 				regulator-initial-mode = <0>;
 
-				lp-stop {					
-					regulator-off-in-suspend;
+				lp-stop {
+					regulator-suspend-microvolt = <3300000>;
+					regulator-on-in-suspend;
 				};
-
 				standby-ddr-sr {
 					regulator-off-in-suspend;
 				};
@@ -589,7 +588,6 @@
 			vbus_sw: pwr_sw2 {
 				regulator-name = "vbus_sw";
 				regulator-active-discharge = <1>;
-				st,mask-reset;
 				lp-stop {
 					regulator-off-in-suspend;
 				};
