@@ -395,7 +395,8 @@
 				};
 
 				standby-ddr-sr {
-					regulator-off-in-suspend;
+					regulator-suspend-microvolt = <3300000>;
+					regulator-on-in-suspend;
 				};
 
 				standby-ddr-off {
